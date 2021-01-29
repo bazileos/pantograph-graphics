@@ -11,10 +11,15 @@ A program által használt library-ket Visual Studio-ba legegyszerűbb módon a 
 
 ```
 vcpkg install magnum[*] --triplet x64-windows
+vcpkg install magnum-plugins[*] --triplet x64-windows
 vcpkg install boost-asio --triplet x64-windows
 ```
 
 Innentől a Magnum és Boost Asio automatikusan elérhető a Visual Studioból, a program akadálymentesen buildelhető.
+
+## Futtatás
+
+Futtatáshoz parancssori argumentumként meg kell adni a programnak, hogy melyik soros porton figyelje a mikrovezérlőt. Ha Visual Studio-ban történik a futtatás, akkor ezt a Project Properties ablak Debugging füle alatti Command Arguments mezőben tudjuk megadni (írjuk be pl. egyszerűen, hogy COM3).
 
 ## Felépítés
 

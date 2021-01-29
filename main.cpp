@@ -6,6 +6,8 @@
 
 ThesisGraphics::ThesisGraphics(const Arguments& arguments, const Configuration& configuration) : Platform::Application{ arguments, configuration } {
   
+    std::cout << "SERIAL: " << arguments.argv[1] << std::endl;
+
     /* Base object, parent of all (for easy manipulation) */
     _manipulator.setParent(&_scene);
     _endEffector.setParent(&_manipulator);
@@ -135,7 +137,7 @@ ThesisGraphics::ThesisGraphics(const Arguments& arguments, const Configuration& 
    _previousBallPosition = Vector2(0.065f, 0.0f);
 
    // Setting port for serial communication
-   _serial.setPort("COM3");
+   _serial.setPort(arguments.argv[1]);
    _serial.openOutputFile();
 }
 

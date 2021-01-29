@@ -1,6 +1,7 @@
 #ifndef THESIS_GRAPHICS_H
 #define THESIS_GRAPHICS_H
 
+#include <iostream>
 #include <Corrade/Containers/Array.h>
 #include <Corrade/Containers/Optional.h>
 #include <Corrade/PluginManager/Manager.h>
